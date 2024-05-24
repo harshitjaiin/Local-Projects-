@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    background: salmon;
+    display: flex;
+    width: 100%;
+    border: 2px solid brown;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.game-images span img{
+    border: 2px solid black;
+    width: 200px;
+    padding: 20px;
+    margin: 40px;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+}
+
+.options button{
+    width: 100px;
+    background: #212121;
+    color:whitesmoke;
+    outline: none;
+    border: none;
+    height: 40px;
+    min-height: 20px;
+    cursor: pointer;
+}

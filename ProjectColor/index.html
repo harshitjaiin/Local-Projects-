@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async practice</title>
+</head>
+<body id='body' style="background: #212121; color:white">
+    <h2>This is a demo website</h2>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+</body>
+</html>
+
+<script>
+
+    const randomColor = ()=> {
+       let color = "#"
+       let reference = "0123456789ABCDEF";
+       for(let i = 0 ; i<6 ; i++){
+        const randomEle = reference[Math.floor(Math.random()*16)]
+        color+=randomEle;
+       }
+       return color;
+    }      
+    
+    let val 
+    const startChangingColor = function(){  
+        val = setInterval(changer , 100)
+        function changer(){
+            document.body.style.background=randomColor();
+        }
+    }
+    
+    const stopChangingColor = function(){
+        clearInterval(val)
+    }
+    document.getElementById('start').addEventListener('click' , startChangingColor)
+    document.getElementById('end').addEventListener('click' , stopChangingColor)
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <nav>
+        <div class="container">
+            <h1>BMI Calculator</h1>
+            <form>
+                <p><label for="height">Height in Cm: </label><input type="text" id="height"></p>
+                <p><label for="weight">Weight in Kg: </label><input type="text" id="weight"></p>
+                <Button>Calculate</Button>
+                <!-- isme dalenge apan DOM se final result! -->
+                <div id="results"></div>
+
+                <div id="weight-guide">
+                    <h3>BMI Weight Guide</h3>
+                    <p>Under Weight- Less than 18.6</p>
+                    <p>Normal Range- Between 18.6-24.9</p>
+                    <p>OverWeight- Greater than 24.9</p>
+                </div>
+            </form>
+        </div>
+    </nav>
+</body>
+</html>
+
+<script>
+    const form = document.querySelector('form');
+    console.log(form);
+
+    form.addEventListener('submit' , (e)=> {
+        //submit automatically
+        //server pe bhej deta hai data
+        //usko rokna hai
+        e.preventDefault();
+
+        const height = parseFloat(document.querySelector('#height').value);
+        const weight = parseFloat(document.querySelector('#weight').value);
+        const results = document.querySelector('#results');
+
+        if(height === '' || height<0 || isNaN(height) || weight==='' || weight<0 || isNaN(weight)){
+            results.innerHTML = "Please give a valid input"
+        }
+        else{
+            const ans = ((weight*10000)/(height*height)).toFixed(2);
+            if(ans<18.6){
+            results.innerHTML = `<span>Your BMI is ${ans}</span>
+                                <p>You are UnderWeight!!</p>`;
+            }
+            else if(ans>25){
+            results.innerHTML = `<span>Your BMI is ${ans}</span>
+                                <p>You are OverWeight!!</p>`;
+            }
+            else{
+            results.innerHTML = `<span>Your BMI is ${ans}</span>
+                                <p>You are in a Good Shape!</p>`;
+            }
+        }
+    })
+</script>

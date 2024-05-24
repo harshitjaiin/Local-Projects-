@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <div class="Boxes" style="text-align: center; padding: 200px; margin: 20px;">
+         <span id = 'red' style="background-color: red; padding: 100px; margin: 10px; display: inline-block; text-align: center;">Red</span>
+        <span id = 'yellow' style="background-color: Yellow; padding: 100px; color:black; margin: 10px; display: inline-block; text-align: center;">Yellow</span>
+        <span id = 'orange' style="background-color: Orange; padding: 100px; margin: 10px; display: inline-block; text-align: center;">Orange</span>
+        <span id = 'black' style="background-color: black; padding: 100px; margin: 10px; display: inline-block; text-align: center;">Black</span>
+        <span id = 'white' style="background-color: white; color:black; padding: 100px; margin: 10px; display: inline-block; text-align: center;">White</span>
+    </div>
+
+    <p style="text-transform: capitalize; font-size: 50px; text-align: center; color:black ; background-color: rgb(28, 28, 138);">Try Clicking on any of the buttons to see the magic!</p>
+</body>
+</html>
+
+<script>
+    const boxes = document.querySelectorAll('.Boxes');
+    const body = document.querySelector('body')
+    console.log(boxes);
+    boxes.forEach( (box)=>{
+        console.log(box);
+        box.addEventListener('click' , (e)=>{
+            console.log(e);
+            console.log(e.target);
+
+            body.style.backgroundColor = e.target.id;
+        });
+    });
+    
+</script>

@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+} 
+
+#main{
+    width: 100%;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color:white;
+}
+
+#nav{
+    width: 100%;
+    padding: 20px 40px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav a{
+    text-decoration: none;
+    font-size: 18px;
+    color:white
+}
+
+#heading{
+    margin-top: 90px;
+}
+
+#heading h1{
+    margin-left:30px;
+    opacity: 0.6;
+    line-height: 1;
+    font-size: 9vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#heading #second-h1{
+   margin-left: 230px;
+}
+
+.blocktext{
+    width: fit-content;
+}
+
+.blocktext h5{
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: right;
+}
+
+#chotiheadings{
+    margin-top: 100px;
+    padding-right: 50px;
+}
+
+#chotiheadings h5{
+    text-transform: uppercase;
+    margin-top: 0.5vw;
+    text-align: right;
+    font-size: 1vw;
+}
+
+#hero-footer{
+    padding: 0 2vw; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+}
+
+#hero-footer a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;  
+}
+
+#hero-footer #iconset{
+    display: flex;
+    gap: 5px;
+}
+
+#hero-footer .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+}
+.second{
+    background: black;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    padding-top: 200px;
+    padding-right: 10vw;
+}
+
+.elem{
+    width: 100%;
+    border-top: 1px solid #888;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.elem h1{
+    font-size:7.6vw;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+.elem h5{
+    font-size:1.2vw;
+    opacity: 0.7;
+}
+
+.elem img{
+    display: none;
+    z-index: 999;
+    height: 140%;
+    position: absolute;
+}
+.last{
+    border-bottom: 1px solid #888;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 10vw 10vw;
+    padding-left: 40vw;
+    padding-top: 300px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#text-about{
+   width: 25rem;
+}
+
+#text-about h5{
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+#text-about p{
+    line-height: 1.7;
+    font-size:15px;
+    opacity: 0.5;
+}
+#text-about p:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#about img{
+    width: 200px;
+}
+
+#text-about a{
+    margin-top: 200px;
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fdf;
+    font-size: 12px;
+    text-decoration: none;
+}

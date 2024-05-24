@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Crypto Tracker</h1>
+        <div class="crypto-info">
+            <!-- Create your dropdown input box and current price option here -->
+            <label for="cryptos" placeholder=""></label>
+            <select id="cryptos" name="cryptos">
+              <option value="volvo" selected>Select a cryptocurrency</option>
+            </select>
+            <h4>Current Price $<span id="current_price"></span></h4>
+        </div>
+        <div class="alert-setup">
+            <!-- Create the alert limit input box here. -->
+            <input type="number" placeholder="Set Price Alert!" id="alert-price">
+        </div>
+        <!-- Create your alert message display thing here. -->
+        <div id="alert-message">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
